@@ -1,0 +1,39 @@
+{
+  "name": "Linkedin Demo",
+  "version": "1.1",
+  "description": "Works on Linked in Page",
+  "icons": { "16": "16.png", "48": "48.png", "128": "128.png" },
+  "permissions": ["storage", "tabs", "webNavigation","notifications"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "js": [
+        "jquery-1.12.4.js",
+        "jquery-ui.js",
+        "knockout-3.2.0.js",
+        "index.js"
+      ],
+      "matches": ["https://www.linkedin.com/*", "https://www.w3schools.com/*"]
+    }
+  ],
+  "web_accessible_resources": [
+    "font-awesome-4.7.0/css/font-awesome.min.css",
+    "index.css",
+    "font-awesome-4.7.0/fonts/FontAwesome.otf",
+    "font-awesome-4.7.0/fonts/fontawesome-webfont.eot",
+    "font-awesome-4.7.0/fonts/fontawesome-webfont.svg",
+    "font-awesome-4.7.0/fonts/fontawesome-webfont.ttf",
+    "font-awesome-4.7.0/fonts/fontawesome-webfont.woff",
+    "font-awesome-4.7.0/fonts/fontawesome-webfont.woff2",
+    "jquery-1.12.4.js",
+    "jquery-ui.js",
+    "knockout-3.2.0.js",
+    "web.js",
+    "image_avatar.png",
+    "128.png"
+  ],
+  "manifest_version": 2
+}
